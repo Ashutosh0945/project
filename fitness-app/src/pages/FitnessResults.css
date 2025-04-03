@@ -1,0 +1,222 @@
+.fitness-results-container {
+  padding: 40px 20px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.results-header h2 {
+  color: var(--primary-color);
+  font-size: 24px;
+  margin: 0;
+}
+
+.update-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.update-btn:hover {
+  background-color: #1976d2;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+.card h3 {
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* User Info Card */
+.info-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  font-weight: 500;
+  width: 130px;
+  color: #666;
+}
+
+.info-value {
+  flex: 1;
+}
+
+/* BMI Card */
+.bmi-value {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bmi-classification {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.bmi-underweight {
+  color: #f57c00;
+}
+
+.bmi-balanced {
+  color: #4CAF50;
+}
+
+.bmi-overweight {
+  color: #f44336;
+}
+
+.bmi-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.bmi-range {
+  text-align: center;
+  flex: 1;
+  padding: 10px 5px;
+  border-radius: var(--border-radius);
+}
+
+.bmi-range.underweight {
+  background-color: rgba(245, 124, 0, 0.2);
+}
+
+.bmi-range.balanced {
+  background-color: rgba(76, 175, 80, 0.2);
+  margin: 0 5px;
+}
+
+.bmi-range.overweight {
+  background-color: rgba(244, 67, 54, 0.2);
+}
+
+.range-label {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.range-value {
+  font-size: 12px;
+}
+
+/* Macro Card */
+.macro-chart {
+  margin-bottom: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.macro-details {
+  margin-top: 20px;
+}
+
+.macro-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.macro-label {
+  font-weight: 500;
+}
+
+.macro-label.protein {
+  color: rgba(255, 99, 132, 1);
+}
+
+.macro-label.carbs {
+  color: rgba(54, 162, 235, 1);
+}
+
+.macro-label.fats {
+  color: rgba(255, 206, 86, 1);
+}
+
+.macro-row.total {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  font-weight: 700;
+}
+
+/* Recommendations Card */
+.recommendations-list {
+  padding-left: 20px;
+}
+
+.recommendations-list li {
+  margin-bottom: 10px;
+}
+
+/* Error and Loading */
+.loading-container,
+.error-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.error-container .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .update-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bmi-scale {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .bmi-range.balanced {
+    margin: 5px 0;
+  }
+} 
